@@ -64,3 +64,46 @@ Mujoco'yu kurduktan sonra aşağıdaki adımları izleyerek ortamları çalışt
    ```bash
    export MUJOCO_PY_MUJOCO_PATH=/path/to/mujoco
    export MUJOCO_PY_MJKEY_PATH=/path/to/mjkey.txt
+
+# Parametreler:
+--env_name: Kullanılacak ortam adı. (default: 'MountainCar-v0')
+
+'Ant-v2', 'HalfCheetah-v2', 'Hopper-v2', 'Humanoid-v2', 'HumanoidStandup-v2', 'InvertedDoublePendulum-v2', 'InvertedPendulum-v2', 'Walker2d-v2', 'Swimmer-v2', 'Reacher-v2'
+
+--algorithm: Seçilen algoritma. ('PPO', 'Q-Learning', 'SAC', 'DDPG')
+
+--train: Eğitim aşamasını başlatır. (default: True)
+
+--render: Ortamı görselleştirir. (default: False)
+
+--epochs: Eğitim süresi, toplam epoch sayısı. (default: 1000)
+
+--entropy_coef: Entropi katsayısı. (default: 0.01)
+
+--critic_coef: Critic katsayısı. (default: 0.5)
+
+--learning_rate: Öğrenme oranı. (default: 0.0003)
+
+--gamma: İndirim faktörü. (default: 0.99)
+
+--lmbda: GAE'de kullanılan lambda katsayısı. (default: 0.95)
+
+--eps_clip: Aktör ve kritik ağlarının clip aralığı. (default: 0.2)
+
+--K_epoch: Eğitimde kullanılan epoch sayısı. (default: 64)
+
+--T_horizon: Bir jenerasyonun eğitime başlamadan önceki zaman adımları. (default: 2048)
+
+--hidden_dim: Aktör ve kritik ağlarının gizli katman boyutu. (default: 64)
+
+--minibatch_size: Mini-batch boyutu. (default: 64)
+
+--tensorboard: TensorBoard desteği. (default: False)
+
+--load: Yüklenmesi gereken model ismi. (default: 'no')
+
+--save_interval: Modelin kaydedilme sıklığı. (default: 100)
+
+--print_interval: Eğitim sırasında yazdırma sıklığı. (default: 20)
+
+--use_cuda: CUDA kullanım durumu. (default: True)
